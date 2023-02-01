@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+     .spinning {
+        animation: spin 7s linear infinite;
+      }
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(-90deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="greeting" class="spinning">Hello</h2>
+    <input type="text" id="input" />
+    <button onclick="changeGreeting()">Change Greeting</button>
+    <script>
+      function changeGreeting() {
+        var input = document.getElementById("input").value;
+        document.getElementById("greeting").innerHTML = input;
+      }
+    </script>
+  </body>
+</html>
